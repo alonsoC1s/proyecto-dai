@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{CCC56807-C38C-4D94-9F53-99719F8F5874}|">
+  <MonoDevelop.Ide.ItemProperties.sitio-dai.Tests FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="sitio-dai/Default.aspx" Line="13" Column="32" />
+      <File FileName="sitio-dai/styles.css" Line="6" Column="179" />
+      <File FileName="sitio-dai/Default.aspx.cs" Line="15" Column="13" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="sitio-dai" expanded="True">
+            <Node name="sitio-dai" expanded="True">
+              <Node name="References" expanded="True">
+                <Node name="GestorBD" selected="True" />
+              </Node>
+              <Node name="Default.aspx" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.sitio-dai PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
