@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Web;
-using System.Web.UI;
 
-namespace sitiodai
-{
+namespace sitiodai {
 
     public partial class Default : System.Web.UI.Page{
 
