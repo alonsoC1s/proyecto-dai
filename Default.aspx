@@ -1,6 +1,8 @@
-﻿<%@ Page Language="C#" Inherits="sitiodai.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
 <!DOCTYPE html>
-<html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
         
     <!-- Estilos. Primero Bootstrap, después propios-->       
@@ -21,7 +23,7 @@
             <div class="col-md-8">
                 <div class="jumbotron-fluid p-5">
                         
-                    <h4 class="display-4"> Bienvenido </h4>
+                    <h4 class="display-4"> Bienvenido desde un lugar extraño </h4>
                     <h5>Inicia Sesión </h5>
                         
                     <form runat="server">
