@@ -27,7 +27,7 @@
                     <h5>Inicia Sesión </h5>
                         
                     <form runat="server">
-                    <asp:login runat="server" id="MyLoginControl">
+                    <asp:login runat="server" id="MyLoginControl" OnAuthenticate="MyLoginControl_Authenticate">
                             
                     </asp:login>
                     </form>
