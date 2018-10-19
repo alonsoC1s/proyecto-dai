@@ -1,0 +1,23 @@
+--- Creación de tablas
+
+create table Usuario (
+nombre  char(30),
+password  char(20),
+Uid     int identity(1,1) primary key not null);
+
+create table Cancion(
+nombre  char(30),
+artista char(20),
+album   char(50),
+año     int,
+precio  money,
+picURL  char(100),
+Cid     int identity(1,1) primary key not null);
+
+create table Compra(
+Cid       int,
+Uid       int,
+fecha     date,
+monto     money,
+primary key (Uid, Cid)
+)

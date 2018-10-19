@@ -23,7 +23,7 @@
             <div class="col-md-8">
                 <div class="jumbotron-fluid p-5">
                         
-                    <h4 class="display-4"> Bienvenido desde un lugar extraño </h4>
+                    <%--<h4 class="display-4"> Bienvenido! </h4>--%>
                     <h5>Inicia Sesión </h5>
                         
                     <form runat="server">

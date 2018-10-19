@@ -1,0 +1,873 @@
+-- Poblando las tuplas
+
+-- Creando algunas Clientes
+insert into Usuario values('a','a')
+insert into Usuario values('b','b')
+insert into Usuario values('alonso','password')
+
+
+-- Creando algunas canciones
+insert into Cancion values(
+  'Thriller',
+  'Michael Jackson',
+  'Greatest Hits',
+  1983,
+  200,
+  ''
+)
+
+insert into Cancion values(
+  'Billie Jean',
+  'Michael Jackson',
+  'Greatest Hits',
+  1983,
+  200,
+  ''
+)
+
+insert into Cancion values(
+  'Single Ladies',
+  'Beyoncé',
+  'Single Ladies',
+  2008,
+  250,
+  ''
+)
+
+insert into Cancion values(
+  'Uptown Funk',
+  'Bruno Mars',
+  'Uptown Special',
+  2014,
+  90,
+  ''
+)
+
+insert into Cancion values(
+  'Bohemian Rhapsody',
+  'Queen',
+  'Greatest Hits',
+  1988,
+  100,
+  ''
+)
+
+insert into Cancion values(
+  'Stairway To Heaven',
+  'Led Zeppelin',
+  'Led Zeppelin',
+  1978,
+  250,
+  ''
+)
+
+insert into Cancion values(
+  'Imagine',
+  'John Lennon',
+  'Imagine Single',
+  1989,
+  150,
+  ''
+)
+
+
+insert into Cancion values(
+  'Smells Like Teen Spirit',
+  'Nirvana',
+  'Nirvana',
+  1983,
+  199,
+  ''
+)
+
+insert into Cancion values(
+  'Hotel California',
+  'Eagles',
+  'The Eagles',
+  1975,
+  190,
+  ''
+)
+
+
+insert into Cancion values(
+  'Hey Jude',
+  'The Beatles',
+  'Hey Jude Single',
+  1965,
+  290,
+  ''
+)
+
+
+insert into Cancion values(
+  'Billie Jean',
+  'Michael Jackson',
+  'Greatest Hits',
+  1983,
+  200,
+  ''
+)
+
+insert into Cancion values(
+  'Single Ladies',
+  'Beyoncé',
+  'Single Ladies',
+  2008,
+  250,
+  ''
+)
+
+insert into Cancion values(
+  'Uptown Funk',
+  'Bruno Mars',
+  'Uptown Special',
+  2014,
+  90,
+  ''
+)
+
+insert into Cancion values(
+  'Bohemian Rhapsody',
+  'Queen',
+  'Greatest Hits',
+  1988,
+  100,
+  ''
+)
+
+insert into Cancion values(
+  'Stairway To Heaven',
+  'Led Zeppelin',
+  'Led Zeppelin',
+  1978,
+  250,
+  ''
+)
+
+insert into Cancion values(
+  'Imagine',
+  'John Lennon',
+  'Imagine Single',
+  1989,
+  150,
+  ''
+)
+
+
+insert into Cancion values(
+  'Smells Like Teen Spirit',
+  'Nirvana',
+  'Nirvana',
+  1983,
+  199,
+  ''
+)
+
+insert into Cancion values(
+  'Hotel California',
+  'Eagles',
+  'The Eagles',
+  1975,
+  190,
+  ''
+)
+
+---
+
+insert into Cancion values(
+  'The Next Episode',
+  'Dr. Dre',
+  '2001',
+  2001,
+  90,
+  ''
+)
+
+insert into Cancion values(
+  'Panda',
+  'Desiigner',
+  'Panda',
+  2017,
+  60,
+  ''
+)
+
+insert into Cancion values(
+  'Thrift Shop',
+  'Macklemore',
+  'The Heist',
+  2016,
+  110,
+  ''
+)
+
+insert into Cancion values(
+  'Mr. Brightside',
+  'The Killers',
+  'Hot Fuss',
+  2008,
+  130,
+  ''
+)
+
+insert into Cancion values(
+  'Highway to Hell',
+  'AC/DC',
+  'Highway to Hell',
+  1968,
+  230,
+  ''
+)
+
+insert into Cancion values(
+  'The Scientist',
+  'Coldplay',
+  'A Rush Of Blood To The Head',
+  2008,
+  210,
+  ''
+)
+
+insert into Cancion values(
+  'I Want It That Way',
+  'Backstreet Boys',
+  'Minllennium',
+  2000,
+  218,
+  ''
+)
+
+-- Creando algunas compras
+
+insert into Compra values(
+  '1', '3', getdate(), 200)
+
+insert into Compra values(
+  '1', '3', getdate(), 200)
+
+insert into Compra values(
+  '1', '3', getdate(), 200)
+
+insert into Compra values(
+  '1', '3', getdate(), 200)
+
+insert into Compra values(
+  '1', '3', getdate(), 200)
+
+insert into Compra values(
+  '1', '1', getdate(), 200)
+
+insert into Compra values(
+  '1', '1', getdate(), 200)
+
+insert into Compra values(
+  '1', '1', getdate(), 200)
+
+insert into Compra values(
+  '1', '1', getdate(), 200)
+
+insert into Compra values(
+  '1', '1', getdate(), 200)
+
+insert into Compra values(
+  '1', '3', getdate(), 200)
+
+insert into Compra values(
+  '1', '2', getdate(), 200)
+
+insert into Compra values(
+  '1', '2', getdate(), 200)
+
+insert into Compra values(
+  '1', '1', getdate(), 200)
+
+insert into Compra values(
+  '1', '2', getdate(), 200)
+
+insert into Compra values(
+  '1', '2', getdate(), 200)
+
+---
+
+insert into Compra values(
+  '5', '1', getdate(), 100)
+
+insert into Compra values(
+  '5', '2', getdate(), 100)
+
+insert into Compra values(
+  '5', '2', getdate(), 100)
+
+insert into Compra values(
+  '5', '3', getdate(), 100)
+
+insert into Compra values(
+  '5', '3', getdate(), 100)
+
+insert into Compra values(
+  '5', '3', getdate(), 100)
+
+insert into Compra values(
+  '5', '1', getdate(), 100)
+
+insert into Compra values(
+  '5', '2', getdate(), 100)
+
+
+---
+insert into Compra values(
+  '8', '3', getdate(), 199)
+
+-- Tuplas generadas por python
+
+insert into Compra values ( '8', '3', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '13', '3', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '1', '3', getdate(), 199)
+ insert into Compra values ( '9', '3', getdate(), 199)
+ insert into Compra values ( '7', '3', getdate(), 199)
+ insert into Compra values ( '5', '2', getdate(), 199)
+ insert into Compra values ( '7', '2', getdate(), 199)
+ insert into Compra values ( '8', '2', getdate(), 199)
+ insert into Compra values ( '8', '3', getdate(), 199)
+ insert into Compra values ( '1', '3', getdate(), 199)
+ insert into Compra values ( '7', '3', getdate(), 199)
+ insert into Compra values ( '3', '3', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '2', '1', getdate(), 199)
+ insert into Compra values ( '16', '2', getdate(), 199)
+ insert into Compra values ( '14', '2', getdate(), 199)
+ insert into Compra values ( '15', '3', getdate(), 199)
+ insert into Compra values ( '7', '2', getdate(), 199)
+ insert into Compra values ( '2', '3', getdate(), 199)
+ insert into Compra values ( '16', '1', getdate(), 199)
+ insert into Compra values ( '4', '2', getdate(), 199)
+ insert into Compra values ( '3', '3', getdate(), 199)
+ insert into Compra values ( '14', '3', getdate(), 199)
+ insert into Compra values ( '5', '3', getdate(), 199)
+ insert into Compra values ( '1', '1', getdate(), 199)
+ insert into Compra values ( '15', '2', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '3', '3', getdate(), 199)
+ insert into Compra values ( '12', '1', getdate(), 199)
+ insert into Compra values ( '10', '2', getdate(), 199)
+ insert into Compra values ( '10', '1', getdate(), 199)
+ insert into Compra values ( '3', '2', getdate(), 199)
+ insert into Compra values ( '4', '1', getdate(), 199)
+ insert into Compra values ( '16', '1', getdate(), 199)
+ insert into Compra values ( '13', '3', getdate(), 199)
+ insert into Compra values ( '8', '1', getdate(), 199)
+ insert into Compra values ( '8', '2', getdate(), 199)
+ insert into Compra values ( '10', '2', getdate(), 199)
+ insert into Compra values ( '3', '2', getdate(), 199)
+ insert into Compra values ( '2', '3', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '8', '2', getdate(), 199)
+ insert into Compra values ( '3', '2', getdate(), 199)
+ insert into Compra values ( '11', '2', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '14', '1', getdate(), 199)
+ insert into Compra values ( '4', '3', getdate(), 199)
+ insert into Compra values ( '1', '1', getdate(), 199)
+ insert into Compra values ( '15', '1', getdate(), 199)
+ insert into Compra values ( '9', '2', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '14', '2', getdate(), 199)
+ insert into Compra values ( '12', '1', getdate(), 199)
+ insert into Compra values ( '10', '3', getdate(), 199)
+ insert into Compra values ( '1', '1', getdate(), 199)
+ insert into Compra values ( '9', '1', getdate(), 199)
+ insert into Compra values ( '15', '1', getdate(), 199)
+ insert into Compra values ( '3', '1', getdate(), 199)
+ insert into Compra values ( '14', '2', getdate(), 199)
+ insert into Compra values ( '1', '2', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '15', '3', getdate(), 199)
+ insert into Compra values ( '8', '1', getdate(), 199)
+ insert into Compra values ( '4', '3', getdate(), 199)
+ insert into Compra values ( '1', '3', getdate(), 199)
+ insert into Compra values ( '13', '2', getdate(), 199)
+ insert into Compra values ( '16', '2', getdate(), 199)
+ insert into Compra values ( '11', '2', getdate(), 199)
+ insert into Compra values ( '4', '3', getdate(), 199)
+ insert into Compra values ( '8', '1', getdate(), 199)
+ insert into Compra values ( '12', '2', getdate(), 199)
+ insert into Compra values ( '10', '1', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '5', '2', getdate(), 199)
+ insert into Compra values ( '6', '2', getdate(), 199)
+ insert into Compra values ( '15', '3', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '16', '2', getdate(), 199)
+ insert into Compra values ( '8', '3', getdate(), 199)
+ insert into Compra values ( '7', '2', getdate(), 199)
+ insert into Compra values ( '12', '2', getdate(), 199)
+ insert into Compra values ( '11', '2', getdate(), 199)
+ insert into Compra values ( '8', '2', getdate(), 199)
+ insert into Compra values ( '1', '3', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '11', '1', getdate(), 199)
+ insert into Compra values ( '8', '1', getdate(), 199)
+ insert into Compra values ( '3', '2', getdate(), 199)
+ insert into Compra values ( '10', '1', getdate(), 199)
+ insert into Compra values ( '5', '2', getdate(), 199)
+ insert into Compra values ( '15', '2', getdate(), 199)
+ insert into Compra values ( '5', '2', getdate(), 199)
+ insert into Compra values ( '17', '1', getdate(), 199)
+ insert into Compra values ( '13', '3', getdate(), 199)
+ insert into Compra values ( '11', '2', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '11', '3', getdate(), 199)
+ insert into Compra values ( '14', '2', getdate(), 199)
+ insert into Compra values ( '1', '2', getdate(), 199)
+ insert into Compra values ( '11', '2', getdate(), 199)
+ insert into Compra values ( '9', '1', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '3', '3', getdate(), 199)
+ insert into Compra values ( '9', '2', getdate(), 199)
+ insert into Compra values ( '6', '2', getdate(), 199)
+ insert into Compra values ( '12', '2', getdate(), 199)
+ insert into Compra values ( '8', '1', getdate(), 199)
+ insert into Compra values ( '3', '3', getdate(), 199)
+ insert into Compra values ( '1', '2', getdate(), 199)
+ insert into Compra values ( '3', '1', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '3', '2', getdate(), 199)
+ insert into Compra values ( '13', '2', getdate(), 199)
+ insert into Compra values ( '12', '1', getdate(), 199)
+ insert into Compra values ( '1', '1', getdate(), 199)
+ insert into Compra values ( '15', '1', getdate(), 199)
+ insert into Compra values ( '5', '2', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '17', '1', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '13', '3', getdate(), 199)
+ insert into Compra values ( '5', '2', getdate(), 199)
+ insert into Compra values ( '9', '3', getdate(), 199)
+ insert into Compra values ( '16', '1', getdate(), 199)
+ insert into Compra values ( '16', '1', getdate(), 199)
+ insert into Compra values ( '10', '1', getdate(), 199)
+ insert into Compra values ( '4', '2', getdate(), 199)
+ insert into Compra values ( '16', '1', getdate(), 199)
+ insert into Compra values ( '10', '1', getdate(), 199)
+ insert into Compra values ( '11', '2', getdate(), 199)
+ insert into Compra values ( '15', '1', getdate(), 199)
+ insert into Compra values ( '16', '1', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '8', '2', getdate(), 199)
+ insert into Compra values ( '5', '1', getdate(), 199)
+ insert into Compra values ( '4', '3', getdate(), 199)
+ insert into Compra values ( '1', '2', getdate(), 199)
+ insert into Compra values ( '10', '1', getdate(), 199)
+ insert into Compra values ( '9', '3', getdate(), 199)
+ insert into Compra values ( '2', '3', getdate(), 199)
+ insert into Compra values ( '5', '3', getdate(), 199)
+ insert into Compra values ( '13', '3', getdate(), 199)
+ insert into Compra values ( '10', '1', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '3', '2', getdate(), 199)
+ insert into Compra values ( '17', '2', getdate(), 199)
+ insert into Compra values ( '15', '1', getdate(), 199)
+ insert into Compra values ( '10', '2', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '4', '3', getdate(), 199)
+ insert into Compra values ( '8', '1', getdate(), 199)
+ insert into Compra values ( '3', '3', getdate(), 199)
+ insert into Compra values ( '7', '2', getdate(), 199)
+ insert into Compra values ( '8', '2', getdate(), 199)
+ insert into Compra values ( '10', '3', getdate(), 199)
+ insert into Compra values ( '4', '3', getdate(), 199)
+ insert into Compra values ( '2', '3', getdate(), 199)
+ insert into Compra values ( '10', '1', getdate(), 199)
+ insert into Compra values ( '1', '1', getdate(), 199)
+ insert into Compra values ( '9', '3', getdate(), 199)
+ insert into Compra values ( '1', '1', getdate(), 199)
+ insert into Compra values ( '17', '2', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '9', '2', getdate(), 199)
+ insert into Compra values ( '8', '1', getdate(), 199)
+ insert into Compra values ( '17', '1', getdate(), 199)
+ insert into Compra values ( '1', '2', getdate(), 199)
+ insert into Compra values ( '15', '2', getdate(), 199)
+ insert into Compra values ( '17', '2', getdate(), 199)
+ insert into Compra values ( '12', '2', getdate(), 199)
+ insert into Compra values ( '5', '1', getdate(), 199)
+ insert into Compra values ( '12', '3', getdate(), 199)
+ insert into Compra values ( '15', '3', getdate(), 199)
+ insert into Compra values ( '17', '2', getdate(), 199)
+ insert into Compra values ( '16', '1', getdate(), 199)
+ insert into Compra values ( '12', '3', getdate(), 199)
+ insert into Compra values ( '12', '3', getdate(), 199)
+ insert into Compra values ( '10', '1', getdate(), 199)
+ insert into Compra values ( '15', '1', getdate(), 199)
+ insert into Compra values ( '1', '2', getdate(), 199)
+ insert into Compra values ( '11', '1', getdate(), 199)
+ insert into Compra values ( '12', '1', getdate(), 199)
+ insert into Compra values ( '16', '1', getdate(), 199)
+ insert into Compra values ( '13', '2', getdate(), 199)
+ insert into Compra values ( '16', '1', getdate(), 199)
+ insert into Compra values ( '15', '2', getdate(), 199)
+ insert into Compra values ( '13', '2', getdate(), 199)
+ insert into Compra values ( '10', '2', getdate(), 199)
+ insert into Compra values ( '13', '2', getdate(), 199)
+ insert into Compra values ( '16', '1', getdate(), 199)
+ insert into Compra values ( '5', '2', getdate(), 199)
+ insert into Compra values ( '5', '3', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '3', '3', getdate(), 199)
+ insert into Compra values ( '2', '3', getdate(), 199)
+ insert into Compra values ( '6', '2', getdate(), 199)
+ insert into Compra values ( '4', '1', getdate(), 199)
+ insert into Compra values ( '9', '1', getdate(), 199)
+ insert into Compra values ( '5', '1', getdate(), 199)
+ insert into Compra values ( '7', '3', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '5', '3', getdate(), 199)
+ insert into Compra values ( '3', '3', getdate(), 199)
+ insert into Compra values ( '14', '1', getdate(), 199)
+ insert into Compra values ( '9', '2', getdate(), 199)
+ insert into Compra values ( '6', '2', getdate(), 199)
+ insert into Compra values ( '1', '2', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '12', '2', getdate(), 199)
+ insert into Compra values ( '8', '3', getdate(), 199)
+ insert into Compra values ( '9', '1', getdate(), 199)
+ insert into Compra values ( '4', '2', getdate(), 199)
+ insert into Compra values ( '2', '3', getdate(), 199)
+ insert into Compra values ( '3', '2', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '2', '1', getdate(), 199)
+ insert into Compra values ( '13', '3', getdate(), 199)
+ insert into Compra values ( '6', '3', getdate(), 199)
+ insert into Compra values ( '12', '3', getdate(), 199)
+ insert into Compra values ( '15', '2', getdate(), 199)
+ insert into Compra values ( '4', '3', getdate(), 199)
+ insert into Compra values ( '10', '3', getdate(), 199)
+ insert into Compra values ( '5', '1', getdate(), 199)
+ insert into Compra values ( '1', '1', getdate(), 199)
+ insert into Compra values ( '12', '1', getdate(), 199)
+ insert into Compra values ( '11', '3', getdate(), 199)
+ insert into Compra values ( '13', '2', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '11', '1', getdate(), 199)
+ insert into Compra values ( '4', '1', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '14', '2', getdate(), 199)
+ insert into Compra values ( '3', '1', getdate(), 199)
+ insert into Compra values ( '3', '1', getdate(), 199)
+ insert into Compra values ( '17', '2', getdate(), 199)
+ insert into Compra values ( '16', '2', getdate(), 199)
+ insert into Compra values ( '1', '2', getdate(), 199)
+ insert into Compra values ( '11', '1', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '9', '2', getdate(), 199)
+ insert into Compra values ( '12', '2', getdate(), 199)
+ insert into Compra values ( '13', '2', getdate(), 199)
+ insert into Compra values ( '10', '3', getdate(), 199)
+ insert into Compra values ( '5', '1', getdate(), 199)
+ insert into Compra values ( '4', '1', getdate(), 199)
+ insert into Compra values ( '12', '3', getdate(), 199)
+ insert into Compra values ( '14', '2', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '5', '1', getdate(), 199)
+ insert into Compra values ( '3', '2', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '14', '2', getdate(), 199)
+ insert into Compra values ( '2', '2', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '13', '3', getdate(), 199)
+ insert into Compra values ( '16', '2', getdate(), 199)
+ insert into Compra values ( '13', '2', getdate(), 199)
+ insert into Compra values ( '5', '2', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '2', '2', getdate(), 199)
+ insert into Compra values ( '6', '2', getdate(), 199)
+ insert into Compra values ( '11', '1', getdate(), 199)
+ insert into Compra values ( '7', '2', getdate(), 199)
+ insert into Compra values ( '9', '2', getdate(), 199)
+ insert into Compra values ( '4', '3', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '5', '2', getdate(), 199)
+ insert into Compra values ( '16', '2', getdate(), 199)
+ insert into Compra values ( '6', '2', getdate(), 199)
+ insert into Compra values ( '14', '2', getdate(), 199)
+ insert into Compra values ( '5', '2', getdate(), 199)
+ insert into Compra values ( '2', '2', getdate(), 199)
+ insert into Compra values ( '16', '2', getdate(), 199)
+ insert into Compra values ( '9', '1', getdate(), 199)
+ insert into Compra values ( '15', '1', getdate(), 199)
+ insert into Compra values ( '6', '2', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '12', '2', getdate(), 199)
+ insert into Compra values ( '15', '1', getdate(), 199)
+ insert into Compra values ( '16', '3', getdate(), 199)
+ insert into Compra values ( '2', '1', getdate(), 199)
+ insert into Compra values ( '16', '1', getdate(), 199)
+ insert into Compra values ( '14', '1', getdate(), 199)
+ insert into Compra values ( '16', '1', getdate(), 199)
+ insert into Compra values ( '14', '2', getdate(), 199)
+ insert into Compra values ( '14', '1', getdate(), 199)
+ insert into Compra values ( '2', '2', getdate(), 199)
+ insert into Compra values ( '7', '3', getdate(), 199)
+ insert into Compra values ( '15', '2', getdate(), 199)
+ insert into Compra values ( '14', '3', getdate(), 199)
+ insert into Compra values ( '12', '2', getdate(), 199)
+ insert into Compra values ( '2', '2', getdate(), 199)
+ insert into Compra values ( '9', '2', getdate(), 199)
+ insert into Compra values ( '3', '1', getdate(), 199)
+ insert into Compra values ( '16', '1', getdate(), 199)
+ insert into Compra values ( '2', '1', getdate(), 199)
+ insert into Compra values ( '1', '1', getdate(), 199)
+ insert into Compra values ( '8', '2', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '5', '3', getdate(), 199)
+ insert into Compra values ( '2', '1', getdate(), 199)
+ insert into Compra values ( '10', '2', getdate(), 199)
+ insert into Compra values ( '2', '1', getdate(), 199)
+ insert into Compra values ( '14', '2', getdate(), 199)
+ insert into Compra values ( '4', '1', getdate(), 199)
+ insert into Compra values ( '5', '2', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '12', '3', getdate(), 199)
+ insert into Compra values ( '2', '1', getdate(), 199)
+ insert into Compra values ( '15', '2', getdate(), 199)
+ insert into Compra values ( '16', '3', getdate(), 199)
+ insert into Compra values ( '6', '3', getdate(), 199)
+ insert into Compra values ( '12', '2', getdate(), 199)
+ insert into Compra values ( '15', '2', getdate(), 199)
+ insert into Compra values ( '2', '2', getdate(), 199)
+ insert into Compra values ( '8', '2', getdate(), 199)
+ insert into Compra values ( '2', '2', getdate(), 199)
+ insert into Compra values ( '2', '3', getdate(), 199)
+ insert into Compra values ( '15', '1', getdate(), 199)
+ insert into Compra values ( '9', '2', getdate(), 199)
+ insert into Compra values ( '15', '2', getdate(), 199)
+ insert into Compra values ( '3', '2', getdate(), 199)
+ insert into Compra values ( '15', '2', getdate(), 199)
+ insert into Compra values ( '8', '1', getdate(), 199)
+ insert into Compra values ( '8', '2', getdate(), 199)
+ insert into Compra values ( '6', '2', getdate(), 199)
+ insert into Compra values ( '13', '3', getdate(), 199)
+ insert into Compra values ( '5', '1', getdate(), 199)
+ insert into Compra values ( '12', '1', getdate(), 199)
+ insert into Compra values ( '14', '1', getdate(), 199)
+ insert into Compra values ( '9', '1', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '12', '3', getdate(), 199)
+ insert into Compra values ( '2', '2', getdate(), 199)
+ insert into Compra values ( '12', '2', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '9', '3', getdate(), 199)
+ insert into Compra values ( '14', '2', getdate(), 199)
+ insert into Compra values ( '5', '1', getdate(), 199)
+ insert into Compra values ( '2', '1', getdate(), 199)
+ insert into Compra values ( '9', '3', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '4', '2', getdate(), 199)
+ insert into Compra values ( '2', '1', getdate(), 199)
+ insert into Compra values ( '9', '2', getdate(), 199)
+ insert into Compra values ( '14', '1', getdate(), 199)
+ insert into Compra values ( '14', '3', getdate(), 199)
+ insert into Compra values ( '4', '2', getdate(), 199)
+ insert into Compra values ( '8', '2', getdate(), 199)
+ insert into Compra values ( '3', '3', getdate(), 199)
+ insert into Compra values ( '10', '3', getdate(), 199)
+ insert into Compra values ( '9', '1', getdate(), 199)
+ insert into Compra values ( '2', '2', getdate(), 199)
+ insert into Compra values ( '15', '3', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '1', '3', getdate(), 199)
+ insert into Compra values ( '9', '1', getdate(), 199)
+ insert into Compra values ( '16', '3', getdate(), 199)
+ insert into Compra values ( '1', '2', getdate(), 199)
+ insert into Compra values ( '4', '2', getdate(), 199)
+ insert into Compra values ( '10', '1', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '1', '1', getdate(), 199)
+ insert into Compra values ( '15', '1', getdate(), 199)
+ insert into Compra values ( '16', '2', getdate(), 199)
+ insert into Compra values ( '12', '3', getdate(), 199)
+ insert into Compra values ( '10', '1', getdate(), 199)
+ insert into Compra values ( '17', '2', getdate(), 199)
+ insert into Compra values ( '15', '2', getdate(), 199)
+ insert into Compra values ( '15', '1', getdate(), 199)
+ insert into Compra values ( '2', '2', getdate(), 199)
+ insert into Compra values ( '9', '2', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '17', '2', getdate(), 199)
+ insert into Compra values ( '6', '3', getdate(), 199)
+ insert into Compra values ( '17', '1', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '12', '1', getdate(), 199)
+ insert into Compra values ( '7', '3', getdate(), 199)
+ insert into Compra values ( '4', '1', getdate(), 199)
+ insert into Compra values ( '12', '3', getdate(), 199)
+ insert into Compra values ( '14', '1', getdate(), 199)
+ insert into Compra values ( '11', '3', getdate(), 199)
+ insert into Compra values ( '3', '1', getdate(), 199)
+ insert into Compra values ( '6', '3', getdate(), 199)
+ insert into Compra values ( '7', '2', getdate(), 199)
+ insert into Compra values ( '3', '2', getdate(), 199)
+ insert into Compra values ( '5', '3', getdate(), 199)
+ insert into Compra values ( '5', '1', getdate(), 199)
+ insert into Compra values ( '9', '3', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '12', '1', getdate(), 199)
+ insert into Compra values ( '14', '1', getdate(), 199)
+ insert into Compra values ( '8', '3', getdate(), 199)
+ insert into Compra values ( '14', '1', getdate(), 199)
+ insert into Compra values ( '9', '2', getdate(), 199)
+ insert into Compra values ( '8', '3', getdate(), 199)
+ insert into Compra values ( '9', '3', getdate(), 199)
+ insert into Compra values ( '16', '3', getdate(), 199)
+ insert into Compra values ( '6', '2', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '11', '2', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '9', '1', getdate(), 199)
+ insert into Compra values ( '17', '2', getdate(), 199)
+ insert into Compra values ( '16', '2', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '5', '2', getdate(), 199)
+ insert into Compra values ( '17', '2', getdate(), 199)
+ insert into Compra values ( '8', '2', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '9', '2', getdate(), 199)
+ insert into Compra values ( '1', '2', getdate(), 199)
+ insert into Compra values ( '5', '2', getdate(), 199)
+ insert into Compra values ( '16', '2', getdate(), 199)
+ insert into Compra values ( '15', '2', getdate(), 199)
+ insert into Compra values ( '16', '1', getdate(), 199)
+ insert into Compra values ( '1', '1', getdate(), 199)
+ insert into Compra values ( '9', '3', getdate(), 199)
+ insert into Compra values ( '6', '2', getdate(), 199)
+ insert into Compra values ( '17', '2', getdate(), 199)
+ insert into Compra values ( '8', '2', getdate(), 199)
+ insert into Compra values ( '14', '2', getdate(), 199)
+ insert into Compra values ( '3', '2', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '17', '2', getdate(), 199)
+ insert into Compra values ( '3', '2', getdate(), 199)
+ insert into Compra values ( '9', '1', getdate(), 199)
+ insert into Compra values ( '3', '3', getdate(), 199)
+ insert into Compra values ( '13', '3', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '5', '2', getdate(), 199)
+ insert into Compra values ( '11', '2', getdate(), 199)
+ insert into Compra values ( '1', '3', getdate(), 199)
+ insert into Compra values ( '15', '3', getdate(), 199)
+ insert into Compra values ( '1', '3', getdate(), 199)
+ insert into Compra values ( '6', '3', getdate(), 199)
+ insert into Compra values ( '16', '2', getdate(), 199)
+ insert into Compra values ( '14', '2', getdate(), 199)
+ insert into Compra values ( '5', '3', getdate(), 199)
+ insert into Compra values ( '12', '2', getdate(), 199)
+ insert into Compra values ( '4', '2', getdate(), 199)
+ insert into Compra values ( '2', '1', getdate(), 199)
+ insert into Compra values ( '15', '3', getdate(), 199)
+ insert into Compra values ( '10', '1', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '7', '3', getdate(), 199)
+ insert into Compra values ( '9', '2', getdate(), 199)
+ insert into Compra values ( '13', '2', getdate(), 199)
+ insert into Compra values ( '2', '2', getdate(), 199)
+ insert into Compra values ( '9', '1', getdate(), 199)
+ insert into Compra values ( '4', '3', getdate(), 199)
+ insert into Compra values ( '2', '3', getdate(), 199)
+ insert into Compra values ( '9', '3', getdate(), 199)
+ insert into Compra values ( '12', '3', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '17', '2', getdate(), 199)
+ insert into Compra values ( '14', '3', getdate(), 199)
+ insert into Compra values ( '8', '2', getdate(), 199)
+ insert into Compra values ( '15', '3', getdate(), 199)
+ insert into Compra values ( '11', '1', getdate(), 199)
+ insert into Compra values ( '11', '3', getdate(), 199)
+ insert into Compra values ( '7', '2', getdate(), 199)
+ insert into Compra values ( '6', '3', getdate(), 199)
+ insert into Compra values ( '12', '2', getdate(), 199)
+ insert into Compra values ( '2', '2', getdate(), 199)
+ insert into Compra values ( '11', '1', getdate(), 199)
+ insert into Compra values ( '4', '3', getdate(), 199)
+ insert into Compra values ( '11', '3', getdate(), 199)
+ insert into Compra values ( '5', '1', getdate(), 199)
+ insert into Compra values ( '7', '2', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '4', '1', getdate(), 199)
+ insert into Compra values ( '13', '3', getdate(), 199)
+ insert into Compra values ( '11', '1', getdate(), 199)
+ insert into Compra values ( '16', '1', getdate(), 199)
+ insert into Compra values ( '9', '1', getdate(), 199)
+ insert into Compra values ( '14', '3', getdate(), 199)
+ insert into Compra values ( '2', '2', getdate(), 199)
+ insert into Compra values ( '11', '1', getdate(), 199)
+ insert into Compra values ( '12', '3', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '6', '1', getdate(), 199)
+ insert into Compra values ( '12', '3', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '4', '2', getdate(), 199)
+ insert into Compra values ( '6', '2', getdate(), 199)
+ insert into Compra values ( '5', '1', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '2', '2', getdate(), 199)
+ insert into Compra values ( '17', '2', getdate(), 199)
+ insert into Compra values ( '12', '3', getdate(), 199)
+ insert into Compra values ( '11', '3', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '9', '2', getdate(), 199)
+ insert into Compra values ( '14', '3', getdate(), 199)
+ insert into Compra values ( '10', '3', getdate(), 199)
+ insert into Compra values ( '4', '2', getdate(), 199)
+ insert into Compra values ( '15', '3', getdate(), 199)
+ insert into Compra values ( '8', '3', getdate(), 199)
+ insert into Compra values ( '1', '1', getdate(), 199)
+ insert into Compra values ( '16', '3', getdate(), 199)
+ insert into Compra values ( '3', '1', getdate(), 199)
+ insert into Compra values ( '2', '1', getdate(), 199)
+ insert into Compra values ( '11', '1', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '9', '1', getdate(), 199)
+ insert into Compra values ( '8', '1', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '14', '1', getdate(), 199)
+ insert into Compra values ( '12', '2', getdate(), 199)
+ insert into Compra values ( '14', '3', getdate(), 199)
+ insert into Compra values ( '14', '2', getdate(), 199)
+ insert into Compra values ( '8', '2', getdate(), 199)
+ insert into Compra values ( '3', '1', getdate(), 199)
+ insert into Compra values ( '16', '3', getdate(), 199)
+ insert into Compra values ( '6', '3', getdate(), 199)
+ insert into Compra values ( '5', '3', getdate(), 199)
+ insert into Compra values ( '14', '2', getdate(), 199)
+ insert into Compra values ( '10', '1', getdate(), 199)
+ insert into Compra values ( '15', '3', getdate(), 199)
+ insert into Compra values ( '15', '3', getdate(), 199)
+ insert into Compra values ( '8', '3', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '15', '1', getdate(), 199)
+ insert into Compra values ( '13', '1', getdate(), 199)
+ insert into Compra values ( '5', '1', getdate(), 199)
+ insert into Compra values ( '7', '3', getdate(), 199)
+ insert into Compra values ( '7', '3', getdate(), 199)
+ insert into Compra values ( '1', '1', getdate(), 199)
+ insert into Compra values ( '1', '3', getdate(), 199)
+ insert into Compra values ( '7', '1', getdate(), 199)
+ insert into Compra values ( '4', '2', getdate(), 199)
+ insert into Compra values ( '4', '3', getdate(), 199)
+ insert into Compra values ( '4', '2', getdate(), 199)
+ insert into Compra values ( '1', '1', getdate(), 199)
+ insert into Compra values ( '10', '3', getdate(), 199)
+ insert into Compra values ( '17', '3', getdate(), 199)
+ insert into Compra values ( '6', '3', getdate(), 199)
+ insert into Compra values ( '11', '2', getdate(), 199)
+ insert into Compra values ( '17', '2', getdate(), 199)
