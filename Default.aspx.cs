@@ -41,10 +41,11 @@ public partial class _Default : System.Web.UI.Page {
         Console.Write(DsGeneral);
 
         if (this.DsGeneral.Tables["Usuario"].Rows.Count != 0) {
-           
+            //Guardamos datos del usuario actual, y despues vamos a la pagina de inicio
+            Session["Username"] = MyLoginControl.UserName; 
             Response.Write("<script>alert('Te encontramos')</script>");
             Server.Transfer("PgPrincipal.aspx"); 
-            //Guardamos datos del usuario actual 
+             
             
         } else {
             Response.Write("<script>alert('NO te encontramos')</script>");
