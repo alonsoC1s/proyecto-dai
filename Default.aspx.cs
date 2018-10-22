@@ -34,8 +34,9 @@ public partial class _Default : System.Web.UI.Page {
         this.gestorLocal = (GestorBD.GestorBD)Session["Gestor"];
 
         string queryStr = "select * from Usuario where nombre ='" + MyLoginControl.UserName + 
-            "' and '" + MyLoginControl.Password + "'";
+            "' and password='" + MyLoginControl.Password + "'";
 
+        Response.Write(queryStr); 
         // Consulta a la base de datos. Verificando si es vacio 
         this.gestorLocal.consBD(queryStr, this.DsGeneral, "Usuario");
         Console.Write(DsGeneral);
