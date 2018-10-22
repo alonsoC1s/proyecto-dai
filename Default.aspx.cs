@@ -35,8 +35,7 @@ public partial class _Default : System.Web.UI.Page {
 
         string queryStr = "select * from Usuario where nombre ='" + MyLoginControl.UserName + 
             "' and password='" + MyLoginControl.Password + "'";
-
-        Response.Write(queryStr); 
+ 
         // Consulta a la base de datos. Verificando si es vacio 
         this.gestorLocal.consBD(queryStr, this.DsGeneral, "Usuario");
         Console.Write(DsGeneral);
@@ -44,6 +43,7 @@ public partial class _Default : System.Web.UI.Page {
         if (this.DsGeneral.Tables["Usuario"].Rows.Count != 0) {
            
             Response.Write("<script>alert('Te encontramos')</script>");
+            Server.Transfer("PgPrincipal.aspx"); 
             //Guardamos datos del usuario actual 
             
         } else {
