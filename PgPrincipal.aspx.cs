@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Web.UI.WebControls;
 
 public partial class PgPrincipal : System.Web.UI.Page 
 {
@@ -9,7 +10,7 @@ public partial class PgPrincipal : System.Web.UI.Page
     private GestorBD.GestorBD gestorLocal;
     DataSet DsGeneral = new DataSet();
     string top5Songs;
-    public Cancion[] populares = new Cancion[5];
+    public Cancion[] populares = new Cancion[6];
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -36,21 +37,21 @@ public partial class PgPrincipal : System.Web.UI.Page
 
         // Asumimos que la base es no vacia. Obtenemos las claves.
         
-        for (int i=0; i<5; i++)
+        for (int i=0; i<6; i++)
         {
             // this.DsGeneral.Tables["compra"].Rows[i]["cid"];
             top5Songs += this.DsGeneral.Tables["compra"].Rows[i]["cid"].ToString(); 
-            if (i < 4)
+            if (i < 5)
             {
                 top5Songs += ","; 
             }
         }
 
-        //Obteniendo solamente las canciones que necesitamos. 
+        //Obteniendo solamente las canciones que necesitamos. Tomamos 6 por razones esteticas
         sqlQuery = "select * from cancion where cid in (" + this.top5Songs + "); ";
         this.gestorLocal.consBD(sqlQuery, DsGeneral, "cancion");
 
-        for (int i = 0; i < 5; i++){
+        for (int i = 0; i < 6; i++){
             //Obteniendo atributos para serializar 
             string nombre = this.DsGeneral.Tables["cancion"].Rows[i]["nombre"].ToString();
             string artista = this.DsGeneral.Tables["cancion"].Rows[i]["artista"].ToString();
@@ -67,4 +68,11 @@ public partial class PgPrincipal : System.Web.UI.Page
 
 
     }
+
+    protected void Unnamed_Click(object sender, EventArgs e) {
+        Button btn = (Button)sender; 
+        Response.Write(btn.CommandName); 
+
+    }
+
 }

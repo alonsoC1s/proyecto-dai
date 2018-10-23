@@ -7,9 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 
-    <!-- Estilos. Primero Bootstrap, después propios-->       
-        
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    <!-- Estilos. Primero Bootstrap, después propios-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 
@@ -17,51 +17,51 @@
 </head>
 <body>
 
-    <!-- Navbar con opciones --> 
+    <!-- Navbar con opciones -->
 
     <div class="container-fluid">
       <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link active bg-light" href="#">
                   <span data-feather="Inicio"></span>
                   Inicio <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link bg-light" href="#">
                   <span data-feather="file"></span>
                   Mi Cuenta
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link bg-light" href="#">
                   <span data-feather="shopping-cart"></span>
                   Busqueda
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link bg-light" href="#">
                   <span data-feather="users"></span>
                   Mi Carrito
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link bg-light" href="#">
                   <span data-feather="bar-chart-2"></span>
                   Historial de compras
                 </a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="Default.aspx">
+                  <a class="nav-link bg-light" href="Default.aspx">
                       Salir
                   </a>
               </li>
             </ul>
 
-            
+
           </div>
         </nav>
 
@@ -71,58 +71,32 @@
                 <h4 class="display-4"> Bienvenido <% Response.Write(hola);  %></h4>
             </div>
           </div>
-          
+
               <div class="container-fluid">
-                  <h5> Top 5 canciones más vendidas</h5>
+                  <h5> Top 6 canciones más vendidas</h5>
               </div>
 
 
-              <!-- Album con todas las canciones --> 
+              <!-- Album con todas las canciones -->
+              <!-- Falta agregar un Form para activar los botones -->
               <div class="album py-5 bg-light">
         <div class="container">
 
+        <form runat="server">
           <div class="row">
+            <!-- Elementos de C# para ejecutar -->
+
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="<% Response.Write(populares[0].picURL); %>" alt="Card image cap">
+                <img class="card-img-top" src="<% Response.Write(populares[0].picURL); %>">
                 <div class="card-body">
-                  <p class="card-text"><% Response.Write(populares[0].nombre);  %></p>
+                  <h5 class="card-text"> <% Response.Write(populares[0].nombre); %> </h5>
+                  <h6 class="card-text"> <% Response.Write(populares[0].artista);  %> </h6>
                   <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
+                    <p class="card-text"> <% Response.Write(populares[0].getDescription());  %> </p>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
+                  <div class="d-flex justify-content-center pt-3">
+                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" CommandName="ThisBtnClick" OnClick="Unnamed_Click" /> 
                   </div>
                 </div>
               </div>
@@ -130,45 +104,15 @@
 
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" src="<% Response.Write(populares[1].picURL); %>">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <h5 class="card-text"> <% Response.Write(populares[1].nombre); %> </h5>
+                  <h6 class="card-text"> <% Response.Write(populares[1].artista);  %> </h6>
                   <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
+                    <p class="card-text"> <% Response.Write(populares[1].getDescription());  %> </p>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
+                  <div class="d-flex justify-content-center pt-3">
+                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame"  /> 
                   </div>
                 </div>
               </div>
@@ -176,55 +120,78 @@
 
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" src="<% Response.Write(populares[2].picURL); %>">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <h5 class="card-text"> <% Response.Write(populares[2].nombre); %> </h5>
+                  <h6 class="card-text"> <% Response.Write(populares[2].artista);  %> </h6>
                   <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
+                    <p class="card-text"> <% Response.Write(populares[2].getDescription());  %> </p>
+                  </div>
+                  <div class="d-flex justify-content-center pt-3">
+                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" /> 
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" src="<% Response.Write(populares[3].picURL); %>">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <h5 class="card-text"> <% Response.Write(populares[3].nombre); %> </h5>
+                  <h6 class="card-text"> <% Response.Write(populares[3].artista);  %> </h6>
                   <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
+                    <p class="card-text"> <% Response.Write(populares[3].getDescription());  %> </p>
+                  </div>
+                  <div class="d-flex justify-content-center pt-3">
+                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" /> 
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" src="<% Response.Write(populares[4].picURL); %>">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <h5 class="card-text"> <% Response.Write(populares[4].nombre); %> </h5>
+                  <h6 class="card-text"> <% Response.Write(populares[4].artista);  %> </h6>
                   <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
+                    <p class="card-text"> <% Response.Write(populares[4].getDescription());  %> </p>
+                  </div>
+                  <div class="d-flex justify-content-center pt-3">
+                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" /> 
                   </div>
                 </div>
               </div>
             </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="<% Response.Write(populares[5].picURL); %>">
+                <div class="card-body">
+                  <h5 class="card-text"> <% Response.Write(populares[5].nombre); %> </h5>
+                  <h6 class="card-text"> <% Response.Write(populares[5].artista);  %> </h6>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="card-text"> <% Response.Write(populares[5].getDescription());  %> </p>
+                  </div>
+                  <div class="d-flex justify-content-center pt-3">
+                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" /> 
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <!-- Termina row de tarjetas --> 
+
           </div>
+        </form>
         </div>
       </div>
           </div>
 
-          
+
 
         </main>
       </div>

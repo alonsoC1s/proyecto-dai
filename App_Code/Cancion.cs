@@ -17,6 +17,15 @@
         this.picURL = pic; 
         this.cid = cid; 
 }
+
+    public string getDescription() {
+        string strBuild = ""; 
+        string anoString = this.ano.ToString();
+        strBuild += this.album + "," + anoString + ". Comprame a " + this.precio + "$"; 
+
+        return strBuild;
+
+    }
     
     
 }
