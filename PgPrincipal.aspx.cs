@@ -101,8 +101,7 @@ public partial class PgPrincipal : System.Web.UI.Page
 
         }
 
-        selectedCancionCid = populares[selectedItemIdx].cid;
-        Session["CompraCancionId"] = selectedCancionCid; 
+        Session["CancionComprada"] = populares[selectedItemIdx]; 
 
         Server.Transfer("PgComfCompra.aspx"); 
 

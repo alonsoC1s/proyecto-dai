@@ -10,6 +10,7 @@ public partial class PgComfCompra : System.Web.UI.Page {
 
     //Atributos de clase
     GestorBD.GestorBD gestorLocal;
+    public Cancion cancionComprada; 
     const string SERVERNAME = "SQLNCLI11";
 
     protected void Page_Load(object sender, EventArgs e) {
@@ -22,6 +23,20 @@ public partial class PgComfCompra : System.Web.UI.Page {
             Session["Gestor"] = this.gestorLocal;
         }
 
-        Response.Write("<script> alert(hola) </script> "); 
+        this.cancionComprada = (Cancion)Session["CancionComprada"]; 
+    }
+
+    protected void compra_Click(object sender, EventArgs e)
+    {
+
+        //Obtenemos id de usuario y de cancion para la alta 
+        Usuario userActual = (Usuario)Session["UsuarioActual"]; 
+
+        // Dando de alta la compra. Asumimos que el gestor ya fue inicializado. 
+        string cadSQL = "insert into Compra values (" + this.cancionComprada.cid + "," + userActual.Uid +
+            ", getDate(), " + this.cancionComprada.precio.ToString() + ");" ;
+
+        Response.Write(cadSQL);
+
     }
 }

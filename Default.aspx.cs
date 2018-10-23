@@ -39,10 +39,18 @@ public partial class _Default : System.Web.UI.Page {
         // Consulta a la base de datos. Verificando si es vacio 
         this.gestorLocal.consBD(queryStr, this.DsGeneral, "Usuario");
         Console.Write(DsGeneral);
+        Usuario elusuario; 
 
         if (this.DsGeneral.Tables["Usuario"].Rows.Count != 0) {
-            //Guardamos datos del usuario actual, y despues vamos a la pagina de inicio
-            Session["Username"] = MyLoginControl.UserName; 
+            //Guardamos datos del usuario actual serializado como objeto nativo, y despues vamos a la pagina de inicio
+            int cid = (int) this.DsGeneral.Tables["Usuario"].Rows[0]["Uid"];
+            string nom = this.DsGeneral.Tables["Usuario"].Rows[0]["nombre"].ToString();
+            string pass = this.DsGeneral.Tables["Usuario"].Rows[0]["password"].ToString();
+
+            Usuario usActual = new Usuario(cid, nom, pass);
+
+
+            Session["UsuarioActual"] = usActual; 
             Response.Write("<script>alert('Te encontramos')</script>");
             Server.Transfer("PgPrincipal.aspx"); 
              
