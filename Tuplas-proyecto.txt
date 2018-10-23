@@ -114,7 +114,7 @@ insert into Cancion values(
   'Greatest Hits',
   1983,
   200,
-  ''
+  'https://is3-ssl.mzstatic.com/image/thumb/Music60/v4/2d/54/b0/2d54b08e-f7c5-2e22-91b6-5ace45e4c2db/source/1200x1200bb.jpg'
 )
 
 insert into Cancion values(
@@ -123,7 +123,7 @@ insert into Cancion values(
   'Greatest Hits',
   1983,
   200,
-  ''
+  'https://is3-ssl.mzstatic.com/image/thumb/Music60/v4/2d/54/b0/2d54b08e-f7c5-2e22-91b6-5ace45e4c2db/source/1200x1200bb.jpg'
 )
 
 insert into Cancion values(
@@ -132,7 +132,7 @@ insert into Cancion values(
   'Single Ladies',
   2008,
   250,
-  ''
+  'https://i.pinimg.com/originals/62/0b/e3/620be3497221b4206c30cdc5ff452c33.jpg'
 )
 
 insert into Cancion values(
@@ -141,137 +141,63 @@ insert into Cancion values(
   'Uptown Special',
   2014,
   90,
-  ''
+  'https://brunomarscolombia.files.wordpress.com/2015/09/mark-ronson-uptown-funk.jpg?w=400'
 )
 
 insert into Cancion values(
   'Bohemian Rhapsody',
   'Queen',
   'Greatest Hits',
-  1988,
+  1981,
   100,
-  ''
+  'https://images-na.ssl-images-amazon.com/images/I/414UsvvcSxL.jpg'
 )
 
 insert into Cancion values(
   'Stairway To Heaven',
   'Led Zeppelin',
-  'Led Zeppelin',
-  1978,
+  'Led Zeppelin IV',
+  1971,
   250,
-  ''
+  'https://images-na.ssl-images-amazon.com/images/I/61qTE9kINgL.jpg'
 )
 
 insert into Cancion values(
   'Imagine',
   'John Lennon',
   'Imagine Single',
-  1989,
+  1971,
   150,
-  ''
+  'https://www.thoughtco.com/thmb/EOy5Q3cmzEr-7lkhnHI1IvudRpc=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/Imagine2Lennon-56934a9f3df78cafda8249ff.jpg'
 )
 
 
 insert into Cancion values(
   'Smells Like Teen Spirit',
   'Nirvana',
-  'Nirvana',
-  1983,
+  'Nevermind',
+  1991,
   199,
-  ''
+  'https://images-na.ssl-images-amazon.com/images/I/81WHFob%2BJGL._SX466_.jpg'
 )
 
 insert into Cancion values(
   'Hotel California',
   'Eagles',
-  'The Eagles',
-  1975,
+  'Hotel California',
+  1977,
   190,
-  ''
+  'https://images-na.ssl-images-amazon.com/images/I/91eh6ApLnzL._SY355_.jpg'
 )
 
 
 insert into Cancion values(
   'Hey Jude',
   'The Beatles',
-  'Hey Jude Single',
-  1965,
+  'Hey Jude',
+  1968,
   290,
-  ''
-)
-
-
-insert into Cancion values(
-  'Billie Jean',
-  'Michael Jackson',
-  'Greatest Hits',
-  1983,
-  200,
-  ''
-)
-
-insert into Cancion values(
-  'Single Ladies',
-  'Beyoncé',
-  'Single Ladies',
-  2008,
-  250,
-  ''
-)
-
-insert into Cancion values(
-  'Uptown Funk',
-  'Bruno Mars',
-  'Uptown Special',
-  2014,
-  90,
-  ''
-)
-
-insert into Cancion values(
-  'Bohemian Rhapsody',
-  'Queen',
-  'Greatest Hits',
-  1988,
-  100,
-  ''
-)
-
-insert into Cancion values(
-  'Stairway To Heaven',
-  'Led Zeppelin',
-  'Led Zeppelin',
-  1978,
-  250,
-  ''
-)
-
-insert into Cancion values(
-  'Imagine',
-  'John Lennon',
-  'Imagine Single',
-  1989,
-  150,
-  ''
-)
-
-
-insert into Cancion values(
-  'Smells Like Teen Spirit',
-  'Nirvana',
-  'Nirvana',
-  1983,
-  199,
-  ''
-)
-
-insert into Cancion values(
-  'Hotel California',
-  'Eagles',
-  'The Eagles',
-  1975,
-  190,
-  ''
+  'https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Hey_Jude_Beatles.jpg/220px-Hey_Jude_Beatles.jpg'
 )
 
 ---
@@ -282,52 +208,52 @@ insert into Cancion values(
   '2001',
   2001,
   90,
-  ''
+  'https://blackculturetv.files.wordpress.com/2015/08/2001.png?w=640'
 )
 
 insert into Cancion values(
   'Panda',
   'Desiigner',
   'Panda',
-  2017,
+  2015,
   60,
-  ''
+  'https://qph.fs.quoracdn.net/main-qimg-2c41ed17e9364293a9cd5fdba29f2b04'
 )
 
 insert into Cancion values(
   'Thrift Shop',
   'Macklemore',
   'The Heist',
-  2016,
+  2012,
   110,
-  ''
+  'https://img.chilango.com/2014/01/the-heist.jpg'
 )
 
 insert into Cancion values(
   'Mr. Brightside',
   'The Killers',
   'Hot Fuss',
-  2008,
+  2004,
   130,
-  ''
+  'http://rockbandaide.com/wp-content/uploads/2010/10/Killers.jpg'
 )
 
 insert into Cancion values(
   'Highway to Hell',
   'AC/DC',
   'Highway to Hell',
-  1968,
+  1970,
   230,
-  ''
+  'https://images-na.ssl-images-amazon.com/images/I/51NdC7BYcRL._SY355_.jpg'
 )
 
 insert into Cancion values(
   'The Scientist',
   'Coldplay',
   'A Rush Of Blood To The Head',
-  2008,
+  2002,
   210,
-  ''
+  'http://www.stereocien.com.mx/system/storage/serve/3208/a2.jpg'
 )
 
 insert into Cancion values(
@@ -336,7 +262,7 @@ insert into Cancion values(
   'Minllennium',
   2000,
   218,
-  ''
+  'https://images.genius.com/d5f35f8f0a6527791a21a58e077a552f.650x650x1.jpg'
 )
 
 -- Creando algunas compras
