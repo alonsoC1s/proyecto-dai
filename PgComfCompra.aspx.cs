@@ -21,5 +21,7 @@ public partial class PgComfCompra : System.Web.UI.Page {
 
             Session["Gestor"] = this.gestorLocal;
         }
+
+        Response.Write("<script> alert(hola) </script> "); 
     }
 }

@@ -96,7 +96,7 @@
                     <p class="card-text"> <% Response.Write(populares[0].getDescription());  %> </p>
                   </div>
                   <div class="d-flex justify-content-center pt-3">
-                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" CommandName="ThisBtnClick" OnClick="Unnamed_Click" /> 
+                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" CommandName="btnItem0" OnClick="Unnamed_Click" /> 
                   </div>
                 </div>
               </div>
@@ -112,7 +112,7 @@
                     <p class="card-text"> <% Response.Write(populares[1].getDescription());  %> </p>
                   </div>
                   <div class="d-flex justify-content-center pt-3">
-                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame"  /> 
+                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" CommandName="btnItem1" OnClick="Unnamed_Click" />  
                   </div>
                 </div>
               </div>
@@ -128,7 +128,7 @@
                     <p class="card-text"> <% Response.Write(populares[2].getDescription());  %> </p>
                   </div>
                   <div class="d-flex justify-content-center pt-3">
-                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" /> 
+                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" CommandName="btnItem2" OnClick="Unnamed_Click" /> 
                   </div>
                 </div>
               </div>
@@ -144,7 +144,7 @@
                     <p class="card-text"> <% Response.Write(populares[3].getDescription());  %> </p>
                   </div>
                   <div class="d-flex justify-content-center pt-3">
-                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" /> 
+                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" CommandName="btnItem3" OnClick="Unnamed_Click" /> 
                   </div>
                 </div>
               </div>
@@ -160,7 +160,7 @@
                     <p class="card-text"> <% Response.Write(populares[4].getDescription());  %> </p>
                   </div>
                   <div class="d-flex justify-content-center pt-3">
-                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" /> 
+                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" CommandName="btnItem4" OnClick="Unnamed_Click" /> 
                   </div>
                 </div>
               </div>
@@ -176,7 +176,7 @@
                     <p class="card-text"> <% Response.Write(populares[5].getDescription());  %> </p>
                   </div>
                   <div class="d-flex justify-content-center pt-3">
-                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" /> 
+                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" text="Comprame" CommandName="btnItem5" OnClick="Unnamed_Click" /> 
                   </div>
                 </div>
               </div>

@@ -70,8 +70,41 @@ public partial class PgPrincipal : System.Web.UI.Page
     }
 
     protected void Unnamed_Click(object sender, EventArgs e) {
-        Button btn = (Button)sender; 
-        Response.Write(btn.CommandName); 
+        Button btn = (Button)sender;
+        int selectedItemIdx = 0;
+        int selectedCancionCid; 
+        
+        switch (btn.CommandName) {
+            case "btnItem0":
+                selectedItemIdx = 0;
+                break;
+
+            case "btnItem1":
+                selectedItemIdx = 1;
+                break;
+
+            case "btnItem2":
+                selectedItemIdx = 2;
+                break;
+
+            case "btnItem3":
+                selectedItemIdx = 3;
+                break;
+
+            case "btnItem4":
+                selectedItemIdx = 4;
+                break;
+
+            case "btnItem5":
+                selectedItemIdx = 5;
+                break;
+
+        }
+
+        selectedCancionCid = populares[selectedItemIdx].cid;
+        Session["CompraCancionId"] = selectedCancionCid; 
+
+        Server.Transfer("PgComfCompra.aspx"); 
 
     }
 
