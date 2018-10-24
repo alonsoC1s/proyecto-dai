@@ -70,18 +70,19 @@
           <form runat="server">
               <div class="row justify-content-center">
                 <h4 class="display-4"> Búsqueda </h4>
+                 <p> Deja un campo vacio para buscar solo cancion o solo artista</p>
               </div>
               <div class="row justify-content-center">
                 
                     <asp:TextBox runat="server" CssClass="p-2" Text="Artista" ID="txtArtista"> </asp:TextBox>
                     <asp:TextBox runat="server" CssClass="p-2" Text="Cancion" ID="txtCancion"> </asp:TextBox>
-                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" Text="Buscar" OnClick="Busqueda_click"/> 
+                    <asp:Button commandName="search" runat="server" CssClass="btn btn-primary bg-dark" Text="Buscar" OnClick="Busqueda_click"/> 
               
               </div>
-              <div class="row justify-content-center pt-5">
-                <p> aqui va el codigo generado. </p>
+              
+                
                 <% Response.Write(placeHolderHtml);  %>
-              </div>
+              
           </form>
         </div>
 

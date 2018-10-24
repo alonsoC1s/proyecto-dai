@@ -8,6 +8,7 @@ public partial class PgPrincipal : System.Web.UI.Page
 
     public string hola = "nombre";
     const string SERVERNAME = "SQLNCLI11";
+    public Usuario usuarioActual; 
     private GestorBD.GestorBD gestorLocal;
     DataSet DsGeneral = new DataSet();
     string top5Songs;
@@ -30,7 +31,8 @@ public partial class PgPrincipal : System.Web.UI.Page
 
         // Recuperamos el nombre del usuario de session, y el gestor iniciado.
         this.gestorLocal = (GestorBD.GestorBD)Session["Gestor"];
-        this.hola = (string) Session["Username"];
+        this.usuarioActual = (Usuario)Session["UsuarioActual"];
+        this.hola = this.usuarioActual.nombre; 
         this.carritoDeCompras = (List<int>)Session["carritoDeCompras"]; 
 
         // Recuperamos las canciones más compradas, y serializamos en objetos nativos 
