@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Web.UI.WebControls;
 
@@ -11,6 +12,7 @@ public partial class PgPrincipal : System.Web.UI.Page
     DataSet DsGeneral = new DataSet();
     string top5Songs;
     public Cancion[] populares = new Cancion[6];
+    public List<int> carritoDeCompras = new List<int>(); 
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -29,6 +31,7 @@ public partial class PgPrincipal : System.Web.UI.Page
         // Recuperamos el nombre del usuario de session, y el gestor iniciado.
         this.gestorLocal = (GestorBD.GestorBD)Session["Gestor"];
         this.hola = (string) Session["Username"];
+        this.carritoDeCompras = (List<int>)Session["carritoDeCompras"]; 
 
         // Recuperamos las canciones más compradas, y serializamos en objetos nativos 
         // Query a la bd
@@ -69,6 +72,8 @@ public partial class PgPrincipal : System.Web.UI.Page
 
     }
 
+    //TODO: Ver que metodo se usa cuando la pagina es limpiada. OnUnload
+
     protected void Unnamed_Click(object sender, EventArgs e) {
         Button btn = (Button)sender;
         int selectedItemIdx = 0;
@@ -101,10 +106,13 @@ public partial class PgPrincipal : System.Web.UI.Page
 
         }
 
-        Session["CancionComprada"] = populares[selectedItemIdx]; 
+        Session["CancionComprada"] = populares[selectedItemIdx];
+        Session["carritoDeCompras"] = this.carritoDeCompras; 
 
         Server.Transfer("PgComfCompra.aspx"); 
 
     }
+
+    
 
 }

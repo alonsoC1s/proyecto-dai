@@ -12,6 +12,7 @@ public partial class PgComfCompra : System.Web.UI.Page {
     GestorBD.GestorBD gestorLocal;
     public Cancion cancionComprada; 
     const string SERVERNAME = "SQLNCLI11";
+    public  List<int> carritoDeCompras = new List<int>(); 
 
     protected void Page_Load(object sender, EventArgs e) {
         // Checamos si es la primera vez que se carga la página
@@ -23,20 +24,29 @@ public partial class PgComfCompra : System.Web.UI.Page {
             Session["Gestor"] = this.gestorLocal;
         }
 
-        this.cancionComprada = (Cancion)Session["CancionComprada"]; 
+        //Recuperamos datos
+        this.cancionComprada = (Cancion)Session["CancionComprada"];
+        this.carritoDeCompras = (List<int>)Session["carritoDeCompras"];
     }
+
+    //TODO: Ver que metodo se usa cuando la pagina es limpiada. OnUnload
 
     protected void compra_Click(object sender, EventArgs e)
     {
 
         //Obtenemos id de usuario y de cancion para la alta 
-        Usuario userActual = (Usuario)Session["UsuarioActual"]; 
+        Usuario userActual = (Usuario)Session["UsuarioActual"];
 
-        // Dando de alta la compra. Asumimos que el gestor ya fue inicializado. 
-        string cadSQL = "insert into Compra values (" + this.cancionComprada.cid + "," + userActual.Uid +
-            ", getDate(), " + this.cancionComprada.precio.ToString() + ");" ;
+        // Actualizamos la lista de carrito de compras. Guardamos carrito en session 
+        this.carritoDeCompras.Add(this.cancionComprada.cid);
 
-        Response.Write(cadSQL);
+        //Actualizamos instancias compartidas.
+        Session["carritoDeCompras"] = carritoDeCompras;
+
+
+        //Confirmamos y regresamos a pg principal
+        Response.Write("<script>alert('Cancion añadida al carrito')</script>");
+        Server.Transfer("PgPrincipal.aspx"); 
 
     }
 }

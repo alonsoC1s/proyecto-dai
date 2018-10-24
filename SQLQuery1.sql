@@ -1,0 +1,1 @@
+select * from cancion where artista='Michael Jackson' and nombre='Thriller'

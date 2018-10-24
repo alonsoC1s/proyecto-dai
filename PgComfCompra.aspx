@@ -25,7 +25,7 @@
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link bg-light" href="#">
+                <a class="nav-link bg-light" href="PgPrincipal.aspx">
                   <span data-feather="Inicio"></span>
                   Inicio <span class="sr-only">(current)</span>
                 </a>
@@ -37,7 +37,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link bg-light" href="#">
+                <a class="nav-link bg-light" href="PgBusqueda.aspx">
                   <span data-feather="shopping-cart"></span>
                   Busqueda
                 </a>
@@ -45,7 +45,7 @@
               <li class="nav-item">
                 <a class="nav-link active bg-light" href="#">
                   <span data-feather="users"></span>
-                  Mi Carrito
+                  Mi Carrito <span class="badge badge-pill badge-primary"> <% Response.Write(this.carritoDeCompras.Count); %> </span>
                 </a>
               </li>
               <li class="nav-item">
@@ -78,7 +78,7 @@
           </div>
             <form runat="server">
                 <div class="row justify-content-center ">
-                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" Text="Confirmar compra" OnClick="compra_Click" />
+                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" Text="Añadir al carrito de compra" OnClick="compra_Click" />
                 </div>
             </form>
         </div>
