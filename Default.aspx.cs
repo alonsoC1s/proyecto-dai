@@ -20,10 +20,13 @@ public partial class _Default : System.Web.UI.Page {
         // Checamos si es la primera vez que se carga la página
         if (!IsPostBack) {
             //Inicializamos el gestor y lo guardamos en session.
+            /*
             this.gestorLocal = new GestorBD.GestorBD(SERVERNAME, "localhost",
                 "sa", "sqladmin", "proyecto-musica");
 
             Session["Gestor"] = this.gestorLocal; 
+            */
+            gestorLocal.conex = new System.Data.OleDb.OleDbConnection("Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=proyecto-musica;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"); 
         }
     }
 

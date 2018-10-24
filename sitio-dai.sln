@@ -1,6 +1,7 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sitio-dai", "sitio-dai\sitio-dai.csproj", "{CCC56807-C38C-4D94-9F53-99719F8F5874}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sitio-dai.Tests", "sitio-dai.Tests\sitio-dai.Tests.csproj", "{B5D37D01-9C56-4473-AA49-04C14BD3CA7C}"
@@ -19,5 +20,11 @@ Global
 		{B5D37D01-9C56-4473-AA49-04C14BD3CA7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5D37D01-9C56-4473-AA49-04C14BD3CA7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5D37D01-9C56-4473-AA49-04C14BD3CA7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92958792-7A9A-4936-BEF5-0C5CA7EEBF4D}
 	EndGlobalSection
 EndGlobal

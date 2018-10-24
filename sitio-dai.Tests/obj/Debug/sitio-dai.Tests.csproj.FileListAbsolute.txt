@@ -1,0 +1,9 @@
+C:\Users\Alonso Martinez\Desktop\proyecto-dai\sitio-dai.Tests\bin\Debug\sitio-dai.Tests.dll
+C:\Users\Alonso Martinez\Desktop\proyecto-dai\sitio-dai.Tests\bin\Debug\sitio-dai.Tests.pdb
+C:\Users\Alonso Martinez\Desktop\proyecto-dai\sitio-dai.Tests\bin\Debug\nunit.framework.dll
+C:\Users\Alonso Martinez\Desktop\proyecto-dai\sitio-dai.Tests\bin\Debug\nunit.framework.xml
+C:\Users\Alonso Martinez\Desktop\proyecto-dai\sitio-dai.Tests\obj\Debug\sitio-dai.Tests.csprojAssemblyReference.cache
+C:\Users\Alonso Martinez\Desktop\proyecto-dai\sitio-dai.Tests\obj\Debug\sitio-dai.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Alonso Martinez\Desktop\proyecto-dai\sitio-dai.Tests\obj\Debug\sitio-dai.Tests.csproj.CopyComplete
+C:\Users\Alonso Martinez\Desktop\proyecto-dai\sitio-dai.Tests\obj\Debug\sitio-dai.Tests.dll
+C:\Users\Alonso Martinez\Desktop\proyecto-dai\sitio-dai.Tests\obj\Debug\sitio-dai.Tests.pdb

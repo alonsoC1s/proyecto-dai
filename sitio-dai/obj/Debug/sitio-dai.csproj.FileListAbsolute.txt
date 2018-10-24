@@ -5,3 +5,7 @@
 /Users/alonsomartinez/Desktop/Programming/C-Sharp/sitio-dai/sitio-dai/obj/Debug/sitio-dai.dll
 /Users/alonsomartinez/Desktop/Programming/C-Sharp/sitio-dai/sitio-dai/obj/Debug/sitio-dai.pdb
 /Users/alonsomartinez/Desktop/Programming/C-Sharp/sitio-dai/sitio-dai/obj/Debug/sitio-dai.csproj.CopyComplete
+C:\Users\Alonso Martinez\Desktop\proyecto-dai\sitio-dai\obj\Debug\sitio-dai.csprojAssemblyReference.cache
+C:\Users\Alonso Martinez\Desktop\proyecto-dai\sitio-dai\obj\Debug\sitio-dai.csproj.CoreCompileInputs.cache
+C:\Users\Alonso Martinez\Desktop\proyecto-dai\sitio-dai\obj\Debug\sitio-dai.dll
+C:\Users\Alonso Martinez\Desktop\proyecto-dai\sitio-dai\obj\Debug\sitio-dai.pdb
