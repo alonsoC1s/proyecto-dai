@@ -49,7 +49,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link bg-light" href="#">
+                <a class="nav-link bg-light" href="PgHistorialCompras.aspx">
                   <span data-feather="bar-chart-2"></span>
                   Historial de compras
                 </a>

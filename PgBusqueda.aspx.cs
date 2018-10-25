@@ -45,7 +45,7 @@ public partial class PgBusqueda : System.Web.UI.Page
     protected void Busqueda_click(object sender, EventArgs e)
     {
         Button btnSender = (Button)sender;
-        Response.Write(String.Format("<script>alert('desde {0}')</script>",btnSender.CommandName));
+        // Response.Write(String.Format("<script>alert('desde {0}')</script>",btnSender.CommandName));
 
         if (btnSender.CommandName == "search")
         {
@@ -70,6 +70,8 @@ public partial class PgBusqueda : System.Web.UI.Page
 
             this.gestorLocal.consBD(queryStr, DsGeneral, "Cancion");
 
+            if (this.DsGeneral.Tables["cancion"].Rows.Count != 0) { }
+
             //Creando elementos html de acuerdo a cuantos resultados tuvimos
             StringBuilder sb = new StringBuilder();
             string htmlScaffold = @"
@@ -79,28 +81,36 @@ public partial class PgBusqueda : System.Web.UI.Page
                     <h5 class='card-title'> {0} </h5>
                     <p class='card-text'> {1} </p>
                     <p class='card-text'> {2} </p>
-                    <input runat='server' type='submit' CommandName='{3}' value='Añadir al carrito' class='btn btn-primary bg-dark' onserverclick='Busqueda_click' />
-                  </div>
+                    <input  type='submit' name='{3}' value='Añadir al carrito' class='btn btn-primary bg-dark'  />
+                    
+                    </div>
             </div> 
         </div>
 
             ";
             int resCount = DsGeneral.Tables["Cancion"].Rows.Count;
-            for (int i = 0; i < resCount; i++)
+
+            if (resCount != 0)
             {
-                //Obteniendo atributos para serializar 
-                string nombre = this.DsGeneral.Tables["cancion"].Rows[i]["nombre"].ToString();
-                string artista = this.DsGeneral.Tables["cancion"].Rows[i]["artista"].ToString();
-                string album = this.DsGeneral.Tables["cancion"].Rows[i]["album"].ToString();
-                int ano = (int)this.DsGeneral.Tables["cancion"].Rows[i]["año"];
-                decimal precio = Convert.ToDecimal(this.DsGeneral.Tables["cancion"].Rows[i]["precio"]);
-                string pic = this.DsGeneral.Tables["cancion"].Rows[i]["picURL"].ToString();
-                int cid = (int)this.DsGeneral.Tables["cancion"].Rows[i]["cid"];
+                for (int i = 0; i < resCount; i++)
+                {
+                    //Obteniendo atributos para serializar 
+                    string nombre = this.DsGeneral.Tables["cancion"].Rows[i]["nombre"].ToString();
+                    string artista = this.DsGeneral.Tables["cancion"].Rows[i]["artista"].ToString();
+                    string album = this.DsGeneral.Tables["cancion"].Rows[i]["album"].ToString();
+                    int ano = (int)this.DsGeneral.Tables["cancion"].Rows[i]["año"];
+                    decimal precio = Convert.ToDecimal(this.DsGeneral.Tables["cancion"].Rows[i]["precio"]);
+                    string pic = this.DsGeneral.Tables["cancion"].Rows[i]["picURL"].ToString();
+                    int cid = (int)this.DsGeneral.Tables["cancion"].Rows[i]["cid"];
 
-                Cancion canc = new Cancion(nombre, artista, album, ano, precio, pic, cid);
+                    Cancion canc = new Cancion(nombre, artista, album, ano, precio, pic, cid);
 
-                sb.AppendFormat(htmlScaffold, nombre, album, canc.getDescription(), cid);
+                    sb.AppendFormat(htmlScaffold, nombre, album, canc.getDescription(), cid);
 
+                }
+            }else
+            {
+                sb.Append("No encontramos canciones con el criterio de busqueda"); 
             }
 
             //Actualizamos el html
