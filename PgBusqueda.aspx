@@ -31,19 +31,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link bg-light" href="#">
-                  <span data-feather="file"></span>
-                  Mi Cuenta
-                </a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link active bg-light" href="PgBusqueda.aspx">
                   <span data-feather="shopping-cart"></span>
                   Busqueda
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link bg-light" href="#">
+                <a class="nav-link bg-light" href="PgCarritoCompra.aspx">
                   <span data-feather="users"></span>
                   Mi Carrito <span class="badge badge-pill badge-primary"> <% Response.Write(this.carritoDeCompras.Count); %> </span>
                 </a>
