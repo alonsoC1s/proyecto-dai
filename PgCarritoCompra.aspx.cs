@@ -92,7 +92,7 @@ public partial class PgCarritoCompra : System.Web.UI.Page
 
         if (resCount > 0)
         {
-            sb.AppendFormat("<div class='row justify-content-center pt-5'> <a class='btn btn-primary'> Confirmar compra </a> </div>");
+            sb.AppendFormat("<div class='row justify-content-center pt-5'> <a class='btn btn-primary' href='pgALTACOMPRA.aspx'> Confirmar compra </a> </div>");
         }
 
         this.placeHolderHtml = sb.ToString(); 
