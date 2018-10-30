@@ -31,12 +31,6 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link bg-light" href="#">
-                  <span data-feather="file"></span>
-                  Mi Cuenta
-                </a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link bg-light" href="PgBusqueda.aspx">
                   <span data-feather="shopping-cart"></span>
                   Busqueda
