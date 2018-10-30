@@ -37,60 +37,66 @@ public partial class PgBusqueda : System.Web.UI.Page
 
 
         // Recuperamos el nombre del usuario de session, y el gestor iniciado.
-        this.gestorLocal = (GestorBD.GestorBD)Session["Gestor"];
-        this.carritoDeCompras = (List<int>)Session["carritoDeCompras"];
-
-
+        //Recuperamos datos. Si son null, redirect a login
+        try
+        {
+            this.gestorLocal = (GestorBD.GestorBD)Session["Gestor"];
+            this.carritoDeCompras = (List<int>)Session["carritoDeCompras"];
+        }
+        catch (Exception exx)
+        {
+            Server.Transfer("Default.aspx");
+        }
 
     }
-
+    // Método manejador de eventos. Es llamado cuando se da click al botón de búsqueda. 
+    // Toma los campos de búsqueda, determina si buscar solo por artista o solo por cancion, y hace la consulta a la BD
     protected void Busqueda_click(object sender, EventArgs e)
     {
         Button btnSender = (Button)sender;
-        // Response.Write(String.Format("<script>alert('desde {0}')</script>",btnSender.CommandName));
+        
 
-        if (btnSender.CommandName == "search")
+        //Obtenemos los términos buscados
+        String qryCancion = txtCancion.Text;
+        String qryArtista = txtArtista.Text;
+
+        //Construimos query y consultamos
+        if (qryArtista != "" && qryCancion != "")
         {
-            //Obtenemos los términos buscados
-            String qryCancion = txtCancion.Text;
-            String qryArtista = txtArtista.Text;
+            this.queryStr = String.Format("select * from Cancion where nombre='{0}' and artista='{1}'; ", qryCancion, qryArtista);
 
-            //Construimos query y consultamos
-            if (qryArtista != "" && qryCancion != "")
-            {
-                this.queryStr = String.Format("select * from Cancion where nombre='{0}' and artista='{1}'; ", qryCancion, qryArtista);
+        }
+        else if (qryCancion == "")
+        {
+            this.queryStr = String.Format("select * from Cancion where artista='{0}'; ", qryArtista);
+        }
+        else if (qryArtista == "")
+        {
+            this.queryStr = String.Format("select * from Cancion where nombre='{0}'; ", qryCancion);
+        }
 
-            }
-            else if (qryCancion == "")
-            {
-                this.queryStr = String.Format("select * from Cancion where artista='{0}'; ", qryArtista);
-            }
-            else if (qryArtista == "")
-            {
-                this.queryStr = String.Format("select * from Cancion where nombre='{0}'; ", qryCancion);
-            }
+        this.gestorLocal.consBD(queryStr, DsGeneral, "Cancion");
 
-            this.gestorLocal.consBD(queryStr, DsGeneral, "Cancion");
-
-            if (this.DsGeneral.Tables["cancion"].Rows.Count != 0) { }
+        if (this.DsGeneral.Tables["cancion"].Rows.Count != 0)
+        {
 
             //Creando elementos html de acuerdo a cuantos resultados tuvimos
             StringBuilder sb = new StringBuilder();
             string htmlScaffold = @"
-        <div class='row justify-content-center pt-5'>
-                <div class='card bg-primary border-dark' style='width: 50%;' >
-                <div class='card text-white bg-primary p-3'>
-                    <h5 class='card-title'> {0} </h5>
-                    <p class='card-text'> {1} </p>
-                    <p class='card-text'> {2} </p>
+            <div class='row justify-content-center pt-5'>
+                    <div class='card bg-primary border-dark' style='width: 50%;' >
+                    <div class='card text-white bg-primary p-3'>
+                        <h5 class='card-title'> {0} </h5>
+                        <p class='card-text'> {1} </p>
+                        <p class='card-text'> {2} </p>
 
-                    <a class='btn btn-dark' href='PgComfCompra-v2.aspx?cid={3}' target='_self'> Añadir al carrito </a>
+                        <a class='btn btn-dark' href='PgComfCompra-v2.aspx?cid={3}' target='_self'> Añadir al carrito </a>
 
-                    </div>
+                        </div>
+                </div>
             </div>
-        </div>
 
-            ";
+        ";
             int resCount = DsGeneral.Tables["Cancion"].Rows.Count;
 
             if (resCount != 0)
@@ -111,21 +117,17 @@ public partial class PgBusqueda : System.Web.UI.Page
                     sb.AppendFormat(htmlScaffold, nombre, album, canc.getDescription(), cid);
 
                 }
-            }else
+            }
+            else
             {
                 sb.Append("No encontramos canciones con el criterio de busqueda");
             }
 
             //Actualizamos el html
             this.placeHolderHtml = sb.ToString();
-        }else
-        {
-            // Se cliqueo el añadir a carrito.
-            int cid = int.Parse(btnSender.CommandName);
 
 
         }
-
     }
 
 }

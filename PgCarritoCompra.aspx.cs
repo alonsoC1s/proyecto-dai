@@ -7,6 +7,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+//La clase representa la página de carrito de compra. 
+//Muestra los elementos consultando la base de datos, usando la información común de la lista de canciones añadidas al carrito 
 public partial class PgCarritoCompra : System.Web.UI.Page
 {
 
@@ -20,7 +22,7 @@ public partial class PgCarritoCompra : System.Web.UI.Page
     public List<int> carritoDeCompras = new List<int>();
     public string placeHolderHtml; 
 
-
+    // Método llamado al terminar de cargar. Se encarga de obtener referencias al gestor, y otras instancias compartidas como usuario...
     protected void Page_Load(object sender, EventArgs e)
     {
         // Checamos si es la primera vez que se carga la página
@@ -33,11 +35,17 @@ public partial class PgCarritoCompra : System.Web.UI.Page
             Session["Gestor"] = this.gestorLocal;
             this.carritoDeCompras = (List<int>)Session["carritoDeCompras"];
         }
-        // Recuperamos el nombre del usuario de session, y el gestor iniciado.
-        this.gestorLocal = (GestorBD.GestorBD)Session["Gestor"];
-        this.usuarioActual = (Usuario)Session["UsuarioActual"];
-        this.hola = this.usuarioActual.nombre;
-        this.carritoDeCompras = (List<int>)Session["carritoDeCompras"];
+
+        // Recuperamos el nombre del usuario de session, y el gestor iniciado. Si alguno es null, redirect a login
+        try
+        {
+            this.gestorLocal = (GestorBD.GestorBD)Session["Gestor"];
+            this.usuarioActual = (Usuario)Session["UsuarioActual"];
+            this.hola = this.usuarioActual.nombre;
+            this.carritoDeCompras = (List<int>)Session["carritoDeCompras"];
+        }catch (Exception exx ){
+            Server.Transfer("Default.aspx"); 
+        }
 
         // Consultamos BD para obtener las canciones en el carrito 
         string rangeStr = "("; 
@@ -66,6 +74,7 @@ public partial class PgCarritoCompra : System.Web.UI.Page
                     <h5 class='card-title'> {0} </h5>
                     <p class='card-text'> {1} </p>
                     <p class='card-text'> {2} </p>
+                    <p class='card-text'> {4} $$ </p>
                     <a class='btn btn-dark' href='PgEliminarCompra.aspx?cid={3}' target='_self' > Eliminar del carrito </a>
                   </div>
             </div> 
@@ -73,6 +82,7 @@ public partial class PgCarritoCompra : System.Web.UI.Page
         ";
 
         int resCount = DsGeneral.Tables["Cancion"].Rows.Count;
+        decimal totalCompra = 0; 
         for (int i = 0; i < resCount; i++)
         {
             //Obteniendo atributos para serializar 
@@ -86,12 +96,15 @@ public partial class PgCarritoCompra : System.Web.UI.Page
 
             Cancion canc = new Cancion(nombre, artista, album, ano, precio, pic, cid);
 
-            sb.AppendFormat(htmlScaffold, nombre, album, canc.getDescription(), cid);
+            sb.AppendFormat(htmlScaffold, nombre, album, canc.getDescription(), cid, precio);
+
+            totalCompra += precio; 
 
         }
 
         if (resCount > 0)
         {
+            sb.AppendFormat("<div class='row justify-content-center pt-5'> <p> Total: {0}$$ </div>", totalCompra);
             sb.AppendFormat("<div class='row justify-content-center pt-5'> <a class='btn btn-primary' href='pgALTACOMPRA.aspx'> Confirmar compra </a> </div>");
         }
 

@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+// La clase representa la página de confirmación de compra. Se encarga de añadir una cancion en el caso de que el usuario la seleccione
 public partial class PgComfCompra : System.Web.UI.Page {
 
 
@@ -17,6 +18,7 @@ public partial class PgComfCompra : System.Web.UI.Page {
     private DataSet DsGeneral = new DataSet(); 
     public int CID; 
 
+    // Llamado cuando la pagina termina de cargar. Obtiene referencias a instancias compartidas y checa si el usuario está loggeado
     protected void Page_Load(object sender, EventArgs e) {
         // Checamos si es la primera vez que se carga la página
         if (!IsPostBack) {
@@ -31,15 +33,14 @@ public partial class PgComfCompra : System.Web.UI.Page {
         this.carritoDeCompras = (List<int>)Session["carritoDeCompras"];
         this.gestorLocal = (GestorBD.GestorBD)Session["Gestor"];
 
-        // Recuperamos cancion comprada con el id consultando bd
-        try
-        {
+        // Recuperamos el id pasado por la pagina anterior en forma de un queryString
+        try{
             this.CID = int.Parse(Request.QueryString["cid"]);
-        }catch (Exception ex)
-        {
+        }catch (Exception ex){
             Server.Transfer("PgPrincipal.aspx");
         }
 
+        // Recuperamos cancion comprada con el id consultando bd
         string qryStr = String.Format("Select * from Cancion where cid={0}", CID);
         this.gestorLocal.consBD(qryStr, DsGeneral, "cancion");
 
@@ -54,8 +55,8 @@ public partial class PgComfCompra : System.Web.UI.Page {
         this.cancionComprada = new Cancion(nombre, artista, album, ano, precio, pic, cid); 
     }
 
-    //TODO: Ver que metodo se usa cuando la pagina es limpiada. OnUnload
-
+    // Método escucha. Llamado cuando el usuario confirma que quiere añadir la cancion al carrito.
+    // Añade el id de canción a una lista de id´s como instancia compartida, y regresa al usuario al terminar.
     protected void compra_Click(object sender, EventArgs e)
     {
 

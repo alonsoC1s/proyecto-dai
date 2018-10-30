@@ -30,10 +30,17 @@ public partial class PgComfCompra : System.Web.UI.Page {
             Session["Gestor"] = this.gestorLocal;
         }
 
-        //Recuperamos datos
-        this.cancionComprada = (Cancion)Session["CancionComprada"];
-        this.carritoDeCompras = (List<int>)Session["carritoDeCompras"];
-        this.usuarioActual = (Usuario)Session["UsuarioActual"];
+        //Recuperamos datos. Si son null, redirect a login
+        try
+        {
+            this.cancionComprada = (Cancion)Session["CancionComprada"];
+            this.carritoDeCompras = (List<int>)Session["carritoDeCompras"];
+            this.usuarioActual = (Usuario)Session["UsuarioActual"];
+        }
+        catch (Exception exx)
+        {
+            Server.Transfer("Default.aspx");
+        }
 
         //Hacemos las altas
         StringBuilder sb = new StringBuilder();

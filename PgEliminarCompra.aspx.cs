@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+// Clase que representa la página de confirmación de compra. Se llama cuando el usuario decide pagar desde la página de carrito de compra
 public partial class PgComfCompra : System.Web.UI.Page {
 
 
@@ -17,6 +18,7 @@ public partial class PgComfCompra : System.Web.UI.Page {
     private DataSet DsGeneral = new DataSet(); 
     public int CID; 
 
+    // Llamado al terminar de cargar. Obtiene referencias a las instancias compartidas y checa si debe redirigir al usuario a loggin
     protected void Page_Load(object sender, EventArgs e) {
         // Checamos si es la primera vez que se carga la página
         if (!IsPostBack) {
@@ -56,6 +58,7 @@ public partial class PgComfCompra : System.Web.UI.Page {
 
     //TODO: Ver que metodo se usa cuando la pagina es limpiada. OnUnload
 
+    // Método escucha. Encargado de añadir la cancion seleccionada al carrito, y actualizar la instancia compartida. 
     protected void compra_Click(object sender, EventArgs e)
     {
 

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+// Clase que representa la página de confirmación de compra. Le deja al usuario ver la info. de canción y añadir al carrito
 public partial class PgComfCompra : System.Web.UI.Page {
 
 
@@ -14,6 +15,7 @@ public partial class PgComfCompra : System.Web.UI.Page {
     const string SERVERNAME = "SQLNCLI11";
     public  List<int> carritoDeCompras = new List<int>(); 
 
+    // Método llamado al terminar de cargar. Obtiene referencias a instancias compartidas
     protected void Page_Load(object sender, EventArgs e) {
         // Checamos si es la primera vez que se carga la página
         if (!IsPostBack) {
@@ -25,12 +27,21 @@ public partial class PgComfCompra : System.Web.UI.Page {
         }
 
         //Recuperamos datos
-        this.cancionComprada = (Cancion)Session["CancionComprada"];
-        this.carritoDeCompras = (List<int>)Session["carritoDeCompras"];
+        // Recuperamos el nombre del usuario de session, y el gestor iniciado. Si alguno es null, redirect a login
+        try
+        {
+            this.cancionComprada = (Cancion)Session["CancionComprada"];
+            this.carritoDeCompras = (List<int>)Session["carritoDeCompras"];
+        }
+        catch (Exception exx)
+        {
+            Server.Transfer("Default.aspx");
+        }
     }
 
-    //TODO: Ver que metodo se usa cuando la pagina es limpiada. OnUnload
 
+     // Método escucha llamado cuando el usuario da click en confirmar compra. Se encarga de añadir la cancion al carrito de compra
+     // y se asegura de actualizar la instancia compartida de lista. 
     protected void compra_Click(object sender, EventArgs e)
     {
 

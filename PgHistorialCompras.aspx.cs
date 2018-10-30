@@ -31,12 +31,22 @@ public partial class PgHistorialCompras : System.Web.UI.Page
             Session["Gestor"] = this.gestorLocal;
         }
 
-        // Recuperamos el nombre del usuario de session, y el gestor iniciado.
-        this.gestorLocal = (GestorBD.GestorBD)Session["Gestor"];
-        this.carritoDeCompras = (List<int>)Session["carritoDeCompras"];
+      
 
-        //Obtenemos el usuario actual de session
-        this.usuarioActual = (Usuario)Session["UsuarioActual"];
+        // Recuperamos cancion comprada con el id consultando bd
+        try
+        {
+            // Recuperamos el nombre del usuario de session, y el gestor iniciado.
+            this.gestorLocal = (GestorBD.GestorBD)Session["Gestor"];
+            this.carritoDeCompras = (List<int>)Session["carritoDeCompras"];
+
+            //Obtenemos el usuario actual de session
+            this.usuarioActual = (Usuario)Session["UsuarioActual"];
+        }
+        catch (Exception ex)
+        {
+            Server.Transfer("PgPrincipal.aspx");
+        }
 
         //Consultamos base de datos por compras del usuario
         string queryStr = String.Format("select * from compra as com, cancion as can where com.cid=can.cid and com.uid = {0}", usuarioActual.Uid);
