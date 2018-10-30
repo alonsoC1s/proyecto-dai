@@ -51,7 +51,6 @@ public partial class PgHistorialCompras : System.Web.UI.Page
                     <h5 class='card-title'> {0} </h5>
                     <p class='card-text'> {1} </p>
                     <p class='card-text'> {2} </p>
-                    <input runat='server' type='submit' CommandName='{3}' value='Añadir al carrito' class='btn btn-primary bg-dark' onclick='callHandler();return false;'  />
                   </div>
             </div> 
         </div>

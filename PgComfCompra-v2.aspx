@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PgCarritoCompra.aspx.cs" Inherits="PgCarritoCompra" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PgComfCompra-v2.aspx.cs" Inherits="PgComfCompra" %>
 
 <!DOCTYPE html>
 
@@ -28,6 +28,12 @@
                 <a class="nav-link bg-light" href="PgPrincipal.aspx">
                   <span data-feather="Inicio"></span>
                   Inicio <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link bg-light" href="#">
+                  <span data-feather="file"></span>
+                  Mi Cuenta
                 </a>
               </li>
               <li class="nav-item">
@@ -61,23 +67,20 @@
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
         <div class="container-fluid">
-          <form runat="server">
-              <asp:ScriptManager runat="server" EnablePageMethods="true" /> 
-              <div class="row justify-content-center">
-                <h4 class="display-4"> Carrito de compras de <% Response.Write(usuarioActual.nombre);  %> </h4>
-                
-              </div>
-              <div class="row justify-content-center">
-                
-
-              
-              </div>
-                
-              <% Response.Write(placeHolderHtml); %>
-                
-                
-              
-          </form>
+          <div class="row justify-content-center">
+              <img class="rounded-circle" src="<% Response.Write(cancionComprada.picURL); %>"  style="width: 25%; height: 12.5%; "/>
+          </div>
+          <div class="row justify-content-center pt-4">
+             <h3 class="display-4"> <% Response.Write(cancionComprada.nombre);  %></h3>
+          </div>
+          <div class="row justify-content-center ">
+            <p> <% Response.Write(cancionComprada.getDescription());  %></p>
+          </div>
+            <form runat="server">
+                <div class="row justify-content-center ">
+                    <asp:Button runat="server" CssClass="btn btn-primary bg-dark" Text="Añadir al carrito de compra" OnClick="compra_Click" />
+                </div>
+            </form>
         </div>
 
 
@@ -87,4 +90,3 @@
 
 </body>
 </html>
-

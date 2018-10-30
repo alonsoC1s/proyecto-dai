@@ -81,7 +81,8 @@ public partial class PgBusqueda : System.Web.UI.Page
                     <h5 class='card-title'> {0} </h5>
                     <p class='card-text'> {1} </p>
                     <p class='card-text'> {2} </p>
-                    <input  type='submit' name='{3}' value='Añadir al carrito' class='btn btn-primary bg-dark'  />
+                    
+                    <a class='btn btn-dark' href='PgComfCompra-v2.aspx?cid={3}' target='_self'> Añadir al carrito </a>
                     
                     </div>
             </div> 
