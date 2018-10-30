@@ -7,20 +7,22 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+// PgBusqueda representa la página de búsqueda. Está encargada de
+// mostrar un form para tomar datos de búsqueda, y hace la consulta a la BD, serializa
+// los resultados en objetos nativos, y autogenera HTML para mostrar
 public partial class PgBusqueda : System.Web.UI.Page
 {
 
-    // Atributos de clase 
+    // Atributos de clase
     public List<int> carritoDeCompras = new List<int>();
     const string SERVERNAME = "SQLNCLI11";
     GestorBD.GestorBD gestorLocal;
     DataSet DsGeneral = new DataSet();
     public string placeHolderHtml;
-    string queryStr; 
+    string queryStr;
 
-
-    protected void Page_Load(object sender, EventArgs e)
-    {
+    // Método llamado cuando la página se termina de cargar. Encarcargada de obtener las referencias al gestor
+    protected void Page_Load(object sender, EventArgs e){
 
         // Checamos si es la primera vez que se carga la página
         if (!IsPostBack)
@@ -49,7 +51,7 @@ public partial class PgBusqueda : System.Web.UI.Page
 
         if (btnSender.CommandName == "search")
         {
-            //Obtenemos los términos buscados 
+            //Obtenemos los términos buscados
             String qryCancion = txtCancion.Text;
             String qryArtista = txtArtista.Text;
 
@@ -76,16 +78,16 @@ public partial class PgBusqueda : System.Web.UI.Page
             StringBuilder sb = new StringBuilder();
             string htmlScaffold = @"
         <div class='row justify-content-center pt-5'>
-                <div class='card bg-primary border-dark' style='width: 50%;' > 
+                <div class='card bg-primary border-dark' style='width: 50%;' >
                 <div class='card text-white bg-primary p-3'>
                     <h5 class='card-title'> {0} </h5>
                     <p class='card-text'> {1} </p>
                     <p class='card-text'> {2} </p>
-                    
+
                     <a class='btn btn-dark' href='PgComfCompra-v2.aspx?cid={3}' target='_self'> Añadir al carrito </a>
-                    
+
                     </div>
-            </div> 
+            </div>
         </div>
 
             ";
@@ -95,7 +97,7 @@ public partial class PgBusqueda : System.Web.UI.Page
             {
                 for (int i = 0; i < resCount; i++)
                 {
-                    //Obteniendo atributos para serializar 
+                    //Obteniendo atributos para serializar
                     string nombre = this.DsGeneral.Tables["cancion"].Rows[i]["nombre"].ToString();
                     string artista = this.DsGeneral.Tables["cancion"].Rows[i]["artista"].ToString();
                     string album = this.DsGeneral.Tables["cancion"].Rows[i]["album"].ToString();
@@ -111,17 +113,17 @@ public partial class PgBusqueda : System.Web.UI.Page
                 }
             }else
             {
-                sb.Append("No encontramos canciones con el criterio de busqueda"); 
+                sb.Append("No encontramos canciones con el criterio de busqueda");
             }
 
             //Actualizamos el html
             this.placeHolderHtml = sb.ToString();
         }else
         {
-            // Se cliqueo el añadir a carrito. 
+            // Se cliqueo el añadir a carrito.
             int cid = int.Parse(btnSender.CommandName);
 
-            
+
         }
 
     }

@@ -6,16 +6,20 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+// Clase que representa la página de confirmación de compra.
+// Dicha página solo muestra un mensaje de confirmación, y hace las altas a BD
 public partial class PgComfCompra : System.Web.UI.Page {
 
 
     //Atributos de clase
     GestorBD.GestorBD gestorLocal;
-    public Cancion cancionComprada; 
+    public Cancion cancionComprada;
     const string SERVERNAME = "SQLNCLI11";
     public  List<int> carritoDeCompras = new List<int>();
-    Usuario usuarioActual; 
+    Usuario usuarioActual;
 
+    // Método llamado cuando la página termina de cargar. Encargada de obtener referencias a las
+    // instancias compartidas como usuarioActual, carritoDeCompras, gestorBD, etc...
     protected void Page_Load(object sender, EventArgs e) {
         // Checamos si es la primera vez que se carga la página
         if (!IsPostBack) {
@@ -32,7 +36,7 @@ public partial class PgComfCompra : System.Web.UI.Page {
         this.usuarioActual = (Usuario)Session["UsuarioActual"];
 
         //Hacemos las altas
-        StringBuilder sb = new StringBuilder(); 
+        StringBuilder sb = new StringBuilder();
         foreach (int cid in this.carritoDeCompras)
         {
             sb.AppendFormat("insert into Compra values({0}, {1}, getDate(), {2}  ); \n ", cid, this.usuarioActual.Uid, 200 );
@@ -40,12 +44,15 @@ public partial class PgComfCompra : System.Web.UI.Page {
 
         string sqlQry = sb.ToString();
 
-        this.gestorLocal.altaBD(sqlQry); 
-        
+        this.gestorLocal.altaBD(sqlQry);
+
+        // Borramos los contenidos del carrito
+        this.carritoDeCompras.Clear(); 
+
 
     }
 
-    
+
 
 
 }
